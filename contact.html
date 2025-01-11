@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./my-portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="website icon" type="jpeg" href="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
+    <title>contact</title>
+</head>
+<body>
+    <header style=" background:transparent;">
+        <div class="logo"><img class="the_logo" src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"></div>
+        <ul class="navlist" style="background:url('img3.jpg')">
+            <li><a href="index.html"style="--i:1">Home</a></li>
+            <li><a href="about.html"style="--i:2">About</a></li>
+            <li><a href="service.html"style="--i:3">Services</a></li>
+            <li><a href="prtfolio.html"style="--i:5">Portfolio</a></li>
+            <li><a href="contact.html"style="--i:6">Contact</a></li>
+            <li><a href="login.html"style="--i:6">log in</a></li>
+        </ul>
+        <div id="menu-icon" class="bx bx-menu"></div>
+    </header>
+
+
+<section id="contact" class="contact" style=" background:url('img3.jpg')">
+    <div class="main-text scroll-scale">
+        <h3>Contact us</h3>
+    </div>
+    <form class="scroll-bottom" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="055c380e-62f5-40e1-9040-cc07a4843f0b">
+        <input type="text" name="first name" id="name" placeholder="You Name">
+        <input type="text" name="email" id="email" placeholder="Your Email">
+        <input type="text" name="Adress" id="adress" placeholder="Your Adress">
+        <input type="text" name="phone nombre" id="phone" placeholder="Phone Nomber">
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <div class="btn-box formbtn">
+            <button type="submit" id="submitt" class="btn">Send Message</button>
+            <button class="btn"><a href ="./book.html">Book now</a></button>
+        </div>
+
+    </form>
+</section>
+<footer>
+    <p class="scrol-scale">Copyright &copy; 2024 by ParseCoder || All Right Reserved</p>
+</footer>
+<script src="./mixitup.min.js"></script>
+<script>    
+        let menuIcon =  document.querySelector("#menu-icon");
+        let navList = document.querySelector(".navlist");
+        
+        menuIcon.onclick = () =>{
+            menuIcon.classList.toggle("bx-x")
+            navList.classList.toggle("open")
+        }
+        
+        window.onscroll = () =>{
+            menuIcon.classList.remove("bx-x")
+            navList.classList.remove("open")
+        }
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;;
+        let phone = document.getElementById("phone").value;;
+        let adress = document.getElementById("adress").value;;
+        let messsage = document.getElementById("message").value;
+
+
+
+
+        let submit= document.getElementById("submitt");
+        submit.onclick = function(){
+            name="";
+            email="";
+            phone="";
+            adress="";
+            message=""
+        }
+        </script>
+    
+<script src="./portfolio.js"></script>
+
+
+</body>
+</html>
+

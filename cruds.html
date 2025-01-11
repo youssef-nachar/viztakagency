@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>files</title>
+    <link rel="stylesheet" href="./cruds.css">
+    <link rel="stylesheet" href="./my-portfolio.css">
+</head>
+<body>
+        <header>
+                <div class="logo"><img class="the_logo" src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png"></div>
+                <ul class="navlist">
+                    
+                </ul>
+                <div id="menu-icon" class="bx bx-menu"></div>
+                <li><a href="logout.html"style="--i:6; color:#c0adc9">Log out</a></li>
+            </header>
+        
+    <div class="crud">
+        <div class="head">
+            <h2>your files</h2>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title">
+            <input class="upload" type="file" id="fileInput" onchange="handleFileSelect(event)"/>
+            <button id="submit">create</button>
+        </div>
+        <div class="ouputs">
+            <div class="searchBlock">
+                <input onkeyup = "searchData(this.value)" type="text" placeholder="search" id="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">search by Title</button>
+                    <!-- <button onclick="getSearchMood(this.id)" id="searchCategory">search by Category</button> -->
+
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <tr>
+                    <th>title</th>
+                    <th>files</th>
+                    <th>delete</th>                   
+                    <th>update</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+            let menuIcon =  document.querySelector("#menu-icon");
+        let navList = document.querySelector(".navlist");
+        
+        menuIcon.onclick = () =>{
+            menuIcon.classList.toggle("bx-x")
+            navList.classList.toggle("open")
+        }
+        
+        window.onscroll = () =>{
+            menuIcon.classList.remove("bx-x")
+            navList.classList.remove("open")
+        }
+        
+            </script>
+    <script src="./cruds.js"></script>
+
+</body>
+</html>

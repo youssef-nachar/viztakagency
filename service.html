@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./my-portfolio.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="website icon" type="jpeg"
+        href="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo"><img class="the_logo"
+                src="https://vistak.co/wp-content/uploads/elementor/thumbs/Mask-group-2023-01-05T190619.602-78prqkfjr2p9lghzmxnl3zlzvs04odujirol7dmcjvk.png">
+        </div>
+        <ul class="navlist">
+            <li><a href="index.html" style="--i:1">Home</a></li>
+            <li><a href="about.html" style="--i:2">About</a></li>
+            <li><a href="service.html" style="--i:3">Services</a></li>
+            <li><a href="prtfolio.html" style="--i:5">Portfolio</a></li>
+            <li><a href="contact.html" style="--i:6">Contact</a></li>
+            <li><a href="login.html" style="--i:6">log in</a></li>
+
+        </ul>
+        <div id="menu-icon" class="bx bx-menu"></div>
+    </header>
+
+    <section id="services" class="services">
+        <div class="main-text scroll-bottom">
+            <h2>Our services</h2>
+        </div>
+
+        <div class="section-services" id="section-services">
+            <div class="service-box" style="background:url('img9.jpg') no-repeat; background-size:100% ;">
+                <i id="the_services" class='bx bxs-plane-alt'></i>
+                <h3>tourism</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="service-box" style="background:url('img9.jpg') no-repeat; background-size:100%">
+                <i id="the_services" class='bx bxs-plane-land'></i>
+                <h3>shipping</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="service-box" style="background:url('img9.jpg') no-repeat; background-size:100%">
+                <i id="the_services" class='bx bxs-planet'></i>
+                <h3>travel visa</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="service-box" style="background:url('img9.jpg') no-repeat; background-size:100%">
+                <i id="the_services" class='bx bxs-plane'></i>
+                <h3>immigration</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="service-box" style="background:url('img9.png') no-repeat; background-size:100%">
+                <i id="the_services" class='bx bxs-leaf'></i>
+                <h3>investement</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="service-box" style="background:url('img9.png') no-repeat; background-size:100%">
+                <i id="the_services" class='bx bxs-book'></i>
+                <h3>study</h3>
+                <div class="btn-box service-btn">
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-box service-btn">
+            <button class="to-right" onclick="youssef()"><i class='bx bxs-hand-right'></i></button>
+        </div>
+        <button class="to-left" onclick="scrollRight()"><i class='bx bxs-hand-left'></i></button>
+
+    </section>
+    <section class="section-service-image">
+        <div class="main-text">
+            <h2>Paper Your Application</h1>
+        </div>
+        <img class="service-image" src="https://vistak.co/wp-content/uploads/2023/02/Picture2-1.png" alt="">
+    </section>
+    <footer>
+        <p class="scrol-scale">Copyright &copy; 2024 by ParseCoder || All Right Reserved</p>
+    </footer>
+    <script src="./mixitup.min.js"></script>
+
+    <script>
+        function scrollRight() {
+            const container = document.getElementById('section-services');
+            container.scrollLeft -= 200;  // Scrolls right by 100px
+        }
+
+        function youssef() {
+            const container = document.getElementById('section-services');
+            container.scrollLeft += 200;  // Scrolls .left by 100px
+        }
+
+
+
+        let menuIcon = document.querySelector("#menu-icon");
+        let navList = document.querySelector(".navlist");
+
+        menuIcon.onclick = () => {
+            menuIcon.classList.toggle("bx-x")
+            navList.classList.toggle("open")
+        }
+
+        window.onscroll = () => {
+            menuIcon.classList.remove("bx-x")
+            navList.classList.remove("open")
+        }
+    </script>
+</body>
+
+</html>
